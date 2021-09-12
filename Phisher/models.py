@@ -9,7 +9,6 @@ class SignIn(models.Model):
     
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
-        # self.date_time = datetime.now()
 
     def __str__(self) -> str:
         return self.email

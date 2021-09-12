@@ -1,5 +1,5 @@
 from Phisher.models import SignIn
-from django.shortcuts import render, HttpResponse, HttpResponsePermanentRedirect
+from django.shortcuts import render, HttpResponsePermanentRedirect
 from datetime import datetime
 
 
@@ -19,4 +19,3 @@ def signin(request):
         return HttpResponsePermanentRedirect ('https://accounts.google.com')
 
     return index(request)
-# Create your views here.
