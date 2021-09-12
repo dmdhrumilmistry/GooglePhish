@@ -38,6 +38,10 @@ password : googlephish
 ```bash
 python3 manage.py runserver
 ```
+> if static files are not loading, turn on debug mode or use 
+> ```bash
+> python3 manage.py runserver --insecure
+> ```
 
 ### Have any Ideas 💡 or issue
 - Create an issue
