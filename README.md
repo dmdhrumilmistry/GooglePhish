@@ -18,17 +18,17 @@
     ```
     > Proceed if no errors were encountered.
 
-- Create user
-    ```bash
-    python3 manage.py createsuperuser
-    ```
-
 - migrate db
     ```bash
     python3 manage.py makemigrations
     python3 manage.py migrate
     ```
 
+- Create user
+    ```bash
+    python3 manage.py createsuperuser
+    ```
+    
 - Collect static files
     ```bash
     python3 manage.py collectstatic
@@ -53,9 +53,9 @@
     SECRET_KEY = 'your_new_key'
   ```
   
-## Admin Page
-- login page 
-    ```url
+## View Passwords using Admin Page
+- admin login page 
+    ```
     http://127.0.0.1:8000/admin
     ``` 
 
@@ -72,7 +72,7 @@ python3 manage.py runserver
 
 - Start server
     ```bash
-    python3 manage.py --insecure
+    python3 manage.py runserver
     ```
 
 - forward port using ssh
