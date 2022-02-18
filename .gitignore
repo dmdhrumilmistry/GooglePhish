@@ -215,3 +215,8 @@ cython_debug/
 # Cython debug symbols
 
 # End of https://www.toptal.com/developers/gitignore/api/python,django
+
+# custom files
+serve_static
+*.sqlite3
+db.sqlite3

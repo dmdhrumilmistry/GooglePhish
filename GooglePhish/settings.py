@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q0b_ojdw#k*7^s7*+#dzgb*kb=f%zr+xd82j9=us9vxh8k_n2!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Set debug to False in production
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -125,7 +128,11 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# Comment STATICFILES_DIRS if debug is false
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 
+# Comment STATIC_ROOT when debug is True
+# Never use STATICFILES_DIRS and STATIC_ROOT both at the same time
+STATIC_ROOT = os.path.join(BASE_DIR, 'serve_static')
