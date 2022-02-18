@@ -13,9 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from . import settings
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include, include
+from django.conf.urls.static import static
+
 
 admin.site.site_header = 'GooglePhish Admin Page'
 admin.site.site_title = 'GooglePhish Admin Login'
@@ -23,4 +26,7 @@ admin.site.site_title = 'GooglePhish Admin Login'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Phisher.urls'))
-]
+] 
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
