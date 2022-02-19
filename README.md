@@ -1,5 +1,7 @@
 # GooglePhish
 - Google Account Phishing Tool using Python Django Framework.
+- Screenshot
+  ![Google Login Page Phisher Page Image](https://github.com/dmdhrumilmistry/GooglePhish/blob/main/.images/GmailGoogleLoginPage.png?raw=True)
 
 ## Installation
 - Clone/Download repo
