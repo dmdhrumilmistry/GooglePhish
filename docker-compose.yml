@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+      dockerfile: dockerfile
+    environment:
+      - DJANGO_SUPERUSER_EMAIL="admin@locahost.local"
+      - DJANGO_SUPERUSER_USERNAME="admin"
+      - DJANGO_SUPERUSER_PASSWORD="GooglePhish"
+    image: googlephish
+    ports:
+      - 8000:8000
