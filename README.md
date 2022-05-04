@@ -11,7 +11,7 @@
       ```bash
       docker pull dmdhrumilmistry/googlephish
       ```
-      - run docker image
+    - run docker image
       ```
       docker run -d -p 8000:8000 dmdhrumilmistry/googlephish
       ```
@@ -85,7 +85,7 @@
     ```
     http://127.0.0.1:8000/admin
     ``` 
-
+    
 ## Start Server
 ```bash
 python3 manage.py runserver
@@ -101,14 +101,12 @@ python3 manage.py runserver
     ```bash
     python3 manage.py runserver
     ```
-
 - forward port using ssh
     ```bash
     ssh -R 80:localhost:8000 localhost.run
     ```
     > 8000 is port of localhost server.
     > 80 is [localhost.run](https://localhost.run/) server port. Localhost is service that helps you to expose your server running on localhost to the internet, visit their [documentation](https://localhost.run/docs/) for more info
-
 
 - Now send link to your victim
 
@@ -123,14 +121,18 @@ python3 manage.py runserver
 - Fork the repo, update script and create a Pull Request
        
        
- ### Connect with me on:
-  
-  <p align ="left">
-    <a href = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333"></a>
-    <a href = "https://www.instagram.com/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/Instagram-dmdhrumilmistry-833ab4"></a>
-    <a href = "https://twitter.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Twitter-dmdhrumilmistry-4078c0"></a><br>
-    <a href = "https://www.youtube.com/channel/UChbjrRvbzgY3BIomUI55XDQ" target="_blank"><img src = "https://img.shields.io/badge/YouTube-Dhrumil%20Mistry-critical"></a>
-    <a href = "https://dhrumilmistrywrites.blogspot.com/ " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00"></a>
-    <a href = "https://www.linkedin.com/in/dhrumil-mistry-312966192/" target="_blank"><img src = "https://img.shields.io/badge/LinkedIn-Dhrumil%20Mistry-4078c0"></a><br>
-   </p>
+### Connect with me on:
+<p align ="center">
+    <table>
+      <tr>
+        <td><a hrf = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333"></a></td>
+        <td><a href = "https://www.instagram.com/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/Instagram-dmdhrumilmistry-833ab4"></a></td>
+        <td><a href = "https://twitter.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Twitter-dmdhrumilmistry-4078c0"></a></td>
+      </tr>
+      <tr>
+        <td><a href = "https://www.youtube.com/channel/UChbjrRvbzgY3BIomUI55XDQ" target="_blank"><img src = "https://img.shields.io/badge/YouTube-Dhrumil%20Mistry-critical"></a></td>
+        <td><a href = "https://dhrumilmistrywrites.blogspot.com/ " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00"></a></td>
+        <td><a href = "https://www.linkedin.com/in/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/LinkedIn-Dhrumil%20Mistry-4078c0"></a></td>
+    </table>
+</p>
   
