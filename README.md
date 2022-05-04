@@ -8,13 +8,13 @@
 - Pull created image
     - Install [Docker](https://www.docker.com/products/docker-desktop/)
     - Pull googlephish image
-    ```bash
-    docker pull dmdhrumilmistry/googlephish
-    ```
-    - run docker image
-    ```
-    docker run -d -p 8000:8000 dmdhrumilmistry/googlephish
-    ```
+      ```bash
+      docker pull dmdhrumilmistry/googlephish
+      ```
+      - run docker image
+      ```
+      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish
+      ```
 
 - Build Image and run using build command
     ```bash
