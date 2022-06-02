@@ -5,10 +5,9 @@
 - Google Account Phishing Tool using Python Django Framework.
 
 - Screenshots
-  
-  ![Google Login Page Phisher Home Page Image](.images/home-page.png)
-  
-  ![Google Login Page Phisher Password Page Image](.images/password-page.png)
+  | Screenshots | Screenshots |
+  | ----------- | ----------- |
+  | ![Google Login Page Phisher Home Page Image](.images/home-page.png)| ![Google Login Page Phisher Password Page Image](.images/password-page.png) |
 
 ## Fast Installation Using docker
 
@@ -148,24 +147,43 @@ python3 manage.py runserver
 > https://meet.google.com/linkredirect?dest=your_link
 > ```
 
+## Authors
+
+| dmdhrumilmistry | D4RKH0R1Z0N |
+| --------------- | ----------- |
+| https://github.com/dmdhrumilmistry | https://github.com/D4RKH0R1Z0N |
+- Python django, etc. Made by dmdhrumilmistry
+- Updated google page Made by D4RKH0R1Z0N
+
+> Checkout v2.0 at https://github.com/D4RKH0R1Z0N/gphish
+
 ### Have any Ideas 💡 or issue
 
 - Create an issue
 - Fork the repo, update script and create a Pull Request
 
-### Connect with me on
+### dmdhrumilmistry
 
 <p align ="center">
     <table>
       <tr>
-        <td><a hrf = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333"></a></td>
-        <td><a href = "https://www.instagram.com/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/Instagram-dmdhrumilmistry-833ab4"></a></td>
-        <td><a href = "https://twitter.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Twitter-dmdhrumilmistry-4078c0"></a></td>
+        <td><a hrf = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333?style=for-the-badge"></a></td>
+        <td><a href = "https://www.instagram.com/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/Instagram-dmdhrumilmistry-833ab4?style=for-the-badge"></a></td>
+        <td><a href = "https://twitter.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Twitter-dmdhrumilmistry-4078c0?style=for-the-badge"></a></td>
       </tr>
       <tr>
-        <td><a href = "https://www.youtube.com/channel/UChbjrRvbzgY3BIomUI55XDQ" target="_blank"><img src = "https://img.shields.io/badge/YouTube-Dhrumil%20Mistry-critical"></a></td>
-        <td><a href = "https://dhrumilmistrywrites.blogspot.com/ " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00"></a></td>
-        <td><a href = "https://www.linkedin.com/in/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/LinkedIn-Dhrumil%20Mistry-4078c0"></a></td>
+        <td><a href = "https://www.youtube.com/channel/UChbjrRvbzgY3BIomUI55XDQ" target="_blank"><img src = "https://img.shields.io/badge/YouTube-Dhrumil%20Mistry-critical?style=for-the-badge"></a></td>
+        <td><a href = "https://dhrumilmistrywrites.blogspot.com/ " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00?style=for-the-badge"></a></td>
+        <td><a href = "https://www.linkedin.com/in/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/LinkedIn-Dhrumil%20Mistry-4078c0?style=for-the-badge"></a></td>
     </table>
 </p>
-  
+
+### D4RKH0R1Z0N
+
+<p align ="center">
+    <table>
+      <tr>
+        <td><a hrf = "https://github.com/D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Github-D4RKH0R1Z0N-blue?style=for-the-badge"></a></td>
+        <td><a href = "https://replit.com/@D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Repl.it-D4RKH0R1Z0N-%231c2333?style=for-the-badge"></a></td>
+    </table>
+</p>
