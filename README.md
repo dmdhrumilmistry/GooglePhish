@@ -152,9 +152,10 @@ python3 manage.py runserver
 | dmdhrumilmistry | D4RKH0R1Z0N |
 | --------------- | ----------- |
 | https://github.com/dmdhrumilmistry | https://github.com/D4RKH0R1Z0N |
-| https://github.com/dmdhrumilmistry/GooglePhish | https://github.com/D4RKH0R1Z0N/gphish |
 - Python django, etc. Made by dmdhrumilmistry
 - Updated google page Made by D4RKH0R1Z0N
+
+> Checkout v2.0 at https://github.com/D4RKH0R1Z0N/gphish
 
 ### Have any Ideas 💡 or issue
 
