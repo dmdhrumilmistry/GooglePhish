@@ -166,7 +166,7 @@ python3 manage.py runserver
 <p align ="center">
     <table>
       <tr>
-        <td><a hrf = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333?style=for-the-badge"></a></td>
+        <td><a href = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333?style=for-the-badge"></a></td>
         <td><a href = "https://www.instagram.com/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/Instagram-dmdhrumilmistry-833ab4?style=for-the-badge"></a></td>
         <td><a href = "https://twitter.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Twitter-dmdhrumilmistry-4078c0?style=for-the-badge"></a></td>
       </tr>
@@ -182,7 +182,7 @@ python3 manage.py runserver
 <p align ="center">
     <table>
       <tr>
-        <td><a hrf = "https://github.com/D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Github-D4RKH0R1Z0N-blue?style=for-the-badge"></a></td>
+        <td><a href = "https://github.com/D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Github-D4RKH0R1Z0N-blue?style=for-the-badge"></a></td>
         <td><a href = "https://replit.com/@D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Repl.it-D4RKH0R1Z0N-%231c2333?style=for-the-badge"></a></td>
     </table>
 </p>
