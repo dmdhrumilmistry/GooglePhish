@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --principal: #202124;
+  --p: #797d80;
+  --blue: #2c7fea;
+  --border-card: #dadce0;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -232,6 +246,18 @@ input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text
 input:focus + .placeholder-text .text{
     border-color: #1a73e8;
     color: #1a73e8;
+}
+
+@font-face {
+  font-family: 'password';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+}
+
+input.key {
+  font-family: 'password';
+  width: 100px; height: 16px;  
 }
 
 .H2SoFe *, .H2SoFe *:before, .H2SoFe *:after {
