@@ -1,5 +1,7 @@
 # GooglePhish
 
+![GooglePhish](.images/GooglePhish-500x500.png)
+
 - Google Account Phishing Tool using Python Django Framework.
 
 - Screenshots
