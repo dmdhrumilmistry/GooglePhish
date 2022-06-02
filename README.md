@@ -147,21 +147,20 @@ python3 manage.py runserver
 > https://meet.google.com/linkredirect?dest=your_link
 > ```
 
-## Authors
+## Project Maintainer
+- [dmdhrumilmistry](https://github.com/dmdhrumilmistry)
 
-| dmdhrumilmistry | D4RKH0R1Z0N |
-| --------------- | ----------- |
-| https://github.com/dmdhrumilmistry | https://github.com/D4RKH0R1Z0N |
-- Python django, etc. Made by dmdhrumilmistry
-- Updated google page Made by D4RKH0R1Z0N
-
-> Checkout v2.0 at https://github.com/D4RKH0R1Z0N/gphish
+## Contributors
+ - [D4RKH0R1Z0N](https://github.com/D4RKH0R1Z0N)
+   - Webpage Update 2022
+   > Check `Php` Version at https://github.com/D4RKH0R1Z0N/gphish
 
 ### Have any Ideas 💡 or issue
 
 - Create an issue
 - Fork the repo, update script and create a Pull Request
 
+## Connect with us
 ### dmdhrumilmistry
 
 <p align ="center">
