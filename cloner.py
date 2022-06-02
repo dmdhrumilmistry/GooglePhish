@@ -1,4 +1,6 @@
 '''
+Author: dmdhrumilmistry
+Project: github.com/dmdhrumilmistry/GooglePhish
 Module: cloner.py
 Description: clone webpage
 Usage: python cloner.py -u https://google.com/ -n google.html
@@ -18,7 +20,7 @@ def clone_page(url: str, page_name: str, save_dir: str) -> bool:
 
     # create session and make request to server
     session = requests.session()
-    response = session.get(url, headers={'User-Agent': 'Mozilla'})
+    response = session.get(url)
 
     # if response is OK then store data
     if response.status_code == 200:
