@@ -20,11 +20,14 @@ from django.urls.conf import include, include
 from django.conf.urls.static import static
 
 
-admin.site.site_header = 'GooglePhish Admin Page'
-admin.site.site_title = 'GooglePhish Admin Login'
+# Change Admin Page default values
+admin.site.site_url = '/pawned'
+admin.site.site_header = 'GooglePhish Dashboard'
+admin.site.site_title = 'GooglePhish Login'
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('pawned/', admin.site.urls),
     path('', include('Phisher.urls'))
 ] 
 

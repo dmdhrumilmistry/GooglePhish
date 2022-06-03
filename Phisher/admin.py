@@ -1,5 +1,5 @@
 from django.contrib import admin
 from Phisher.models import SignIn
 
-# Register your models here.
+# Models
 admin.site.register(SignIn)
