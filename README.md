@@ -102,12 +102,12 @@
     SECRET_KEY = 'your_new_key'
   ```
   
-## View Passwords using Admin Page
+## View Passwords using GooglePhish Dashboard Page
 
-- admin login page
+- dashboard login page
 
     ```
-    http://127.0.0.1:8000/admin
+    http://127.0.0.1:8000/pawned
     ```
 
 ## Start Server
