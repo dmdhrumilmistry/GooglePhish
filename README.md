@@ -172,7 +172,7 @@ python3 manage.py runserver
       </tr>
       <tr>
         <td><a href = "https://www.youtube.com/channel/UChbjrRvbzgY3BIomUI55XDQ" target="_blank"><img src = "https://img.shields.io/badge/YouTube-Dhrumil%20Mistry-critical?style=for-the-badge"></a></td>
-        <td><a href = "https://dhrumilmistrywrites.blogspot.com/ " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00?style=for-the-badge"></a></td>
+        <td><a href = "https://dmdhrumilmistry.github.io/blog " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00?style=for-the-badge"></a></td>
         <td><a href = "https://www.linkedin.com/in/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/LinkedIn-Dhrumil%20Mistry-4078c0?style=for-the-badge"></a></td>
     </table>
 </p>
