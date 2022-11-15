@@ -109,13 +109,12 @@
     ```
     http://127.0.0.1:8000/pawned
     ```
--  Default credential
-
-    If you using the docker image you can change defaults credentials in `Dockerfile` before build it or logging you with this account :
+    
+-  Default credential: If you using the docker image you can change defaults credentials in `Dockerfile` before build it or logging you with this account :
 
     username : `admin`
-
     password : `GooglePhish`
+
 
 ## Start Server
 
@@ -158,38 +157,11 @@ python3 manage.py runserver
 - [dmdhrumilmistry](https://github.com/dmdhrumilmistry)
 
 ## Contributors
- - [D4RKH0R1Z0N](https://github.com/D4RKH0R1Z0N)
-   - Webpage Update 2022
-   > Check `Php` Version at https://github.com/D4RKH0R1Z0N/gphish
+ 
+ [Contributors List](https://github.com/dmdhrumilmistry/GooglePhish/graphs/contributors)
 
 ### Have any Ideas 💡 or issue
 
 - Create an issue
 - Fork the repo, update script and create a Pull Request
 
-## Connect with us
-### dmdhrumilmistry
-
-<p align ="center">
-    <table>
-      <tr>
-        <td><a href = "https://github.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Github-dmdhrumilmistry-333?style=for-the-badge"></a></td>
-        <td><a href = "https://www.instagram.com/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/Instagram-dmdhrumilmistry-833ab4?style=for-the-badge"></a></td>
-        <td><a href = "https://twitter.com/dmdhrumilmistry" target="_blank"><img src = "https://img.shields.io/badge/Twitter-dmdhrumilmistry-4078c0?style=for-the-badge"></a></td>
-      </tr>
-      <tr>
-        <td><a href = "https://www.youtube.com/channel/UChbjrRvbzgY3BIomUI55XDQ" target="_blank"><img src = "https://img.shields.io/badge/YouTube-Dhrumil%20Mistry-critical?style=for-the-badge"></a></td>
-        <td><a href = "https://dmdhrumilmistry.github.io/blog " target="_blank"><img src = "https://img.shields.io/badge/Blog-Dhrumil%20Mistry-bd2c00?style=for-the-badge"></a></td>
-        <td><a href = "https://www.linkedin.com/in/dmdhrumilmistry/" target="_blank"><img src = "https://img.shields.io/badge/LinkedIn-Dhrumil%20Mistry-4078c0?style=for-the-badge"></a></td>
-    </table>
-</p>
-
-### D4RKH0R1Z0N
-
-<p align ="center">
-    <table>
-      <tr>
-        <td><a href = "https://github.com/D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Github-D4RKH0R1Z0N-blue?style=for-the-badge"></a></td>
-        <td><a href = "https://replit.com/@D4RKH0R1Z0N" target="_blank"><img src = "https://img.shields.io/badge/Repl.it-D4RKH0R1Z0N-%231c2333?style=for-the-badge"></a></td>
-    </table>
-</p>
