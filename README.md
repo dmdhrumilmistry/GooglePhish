@@ -104,13 +104,13 @@
   
 ## View Passwords using GooglePhish Dashboard Page
 
-- dashboard login page
+- Dashboard login page
 
     ```
     http://127.0.0.1:8000/pawned
     ```
     
--  Default credential: If you using the docker image you can change defaults credentials in `Dockerfile` before build it or logging you with this account :
+- If you using the docker image you can change defaults credentials in `Dockerfile` before build it or logging you with this account
 
     username : `admin`
     password : `GooglePhish`
