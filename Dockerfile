@@ -41,10 +41,15 @@ RUN python manage.py migrate
 # collect static images
 RUN python manage.py collectstatic
 
+# get build arguments (credentials)
+ARG dj_email
+ARG dj_username
+ARG dj_password
+
 # create superuser
-ENV DJANGO_SUPERUSER_EMAIL="admin@locahost.local"
-ENV DJANGO_SUPERUSER_USERNAME="admin"
-ENV DJANGO_SUPERUSER_PASSWORD="GooglePhish"
+ENV DJANGO_SUPERUSER_EMAIL=${dj_email}
+ENV DJANGO_SUPERUSER_USERNAME=${dj_username}
+ENV DJANGO_SUPERUSER_PASSWORD=${dj_password}
 RUN python manage.py createsuperuser --noinput
 
 # expose ports

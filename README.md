@@ -20,9 +20,9 @@
       ```
 
   - run docker image
-
+    > ℹ️ Please replace build arguments by your credentials
       ```bash
-      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish
+      sudo docker build -t googlephish --build-arg dj_email="admin@mail.bzh" --build-arg dj_username="username" --build-arg dj_password="password" . 
       ```
 
 - Build Image and run using build command
