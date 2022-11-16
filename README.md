@@ -109,12 +109,6 @@
     ```
     http://127.0.0.1:8000/pawned
     ```
-    
-- If you using the docker image you can change defaults credentials in `Dockerfile` before build it or logging you with this account
-
-    username : `admin`
-    password : `GooglePhish`
-
 
 ## Start Server
 
