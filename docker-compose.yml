@@ -3,7 +3,8 @@ version: '3'
 services:
   web:
     build:
-      dockerfile: dockerfile
+      context: . 
+      dockerfile: Dockerfile
     environment:
       - DJANGO_SUPERUSER_EMAIL="admin@locahost.local"
       - DJANGO_SUPERUSER_USERNAME="admin"
