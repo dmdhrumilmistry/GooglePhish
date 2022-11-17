@@ -29,10 +29,12 @@
 
     > ℹ️ Please replace build arguments by your credentials
     ```bash
-      sudo docker build -t googlephish --build-arg dj_email="admin@mail.bzh" --build-arg dj_username="username" --build-arg dj_password="password" . 
+      sudo docker build -t googlephish --build-arg dj_email="admin@mail.bzh" --build-arg dj_username="username" --build-arg dj_password="GooglePhish" . 
     ```
 
+
 - Using Docker Compose
+> ⚠️ Doesn't work yet 
 
     ```bash
     docker-compose up
