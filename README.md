@@ -27,15 +27,23 @@
 
 - Build Image and run using build command
 
-    > ℹ️ Please replace build arguments by your credentials
+    
     ```bash
-      sudo docker build -t googlephish --build-arg dj_email="admin@mail.local" --build-arg dj_username="admin" --build-arg dj_password="GooglePhish" . 
+      sudo docker build -t googlephish . 
     ```
+    You can specify your credentials using build arguments like this :
+    > ℹ️ Please replace build arguments by your credentials
+    ``` bash
+    sudo docker build -t googlephish --build-arg dj_email="admin@mail.local" --build-arg dj_username="admin" --build-arg dj_password="GooglePhish" . 
+    ```
+
     and run it :
     ```bash
     docker run -d -p 8000:8000 googlephish
     ```
-
+    If you have build the dockerfile with no arguments, the default credentials are :
+    * Username : `admin`
+    * Password : `GooglePhish`
 
 - Using Docker Compose
 > ⚠️ Doesn't work yet 
