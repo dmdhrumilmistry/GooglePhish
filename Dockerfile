@@ -42,9 +42,9 @@ RUN python manage.py migrate
 RUN python manage.py collectstatic
 
 # get build arguments (credentials)
-ARG dj_email
-ARG dj_username
-ARG dj_password
+ARG dj_email=admin@mail.local
+ARG dj_username=admin
+ARG dj_password=GooglePhish
 
 # create superuser
 ENV DJANGO_SUPERUSER_EMAIL=${dj_email}

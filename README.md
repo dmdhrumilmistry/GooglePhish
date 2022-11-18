@@ -29,7 +29,11 @@
 
     > ℹ️ Please replace build arguments by your credentials
     ```bash
-      sudo docker build -t googlephish --build-arg dj_email="admin@mail.bzh" --build-arg dj_username="username" --build-arg dj_password="GooglePhish" . 
+      sudo docker build -t googlephish --build-arg dj_email="admin@mail.local" --build-arg dj_username="admin" --build-arg dj_password="GooglePhish" . 
+    ```
+    and run it :
+    ```bash
+    docker run -d -p 8000:8000 googlephish
     ```
 
 
