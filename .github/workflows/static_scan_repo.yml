@@ -1,11 +1,12 @@
-name: Scan Repo for Security Issues
+name: 'Scan Repo for Security Issues'
 
 on:
   push:
     branches:
-      - main
+      - 'main'
   pull_request:
-      - main
+    branches:
+      - 'main'
 
 jobs:
   pysa:
@@ -14,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Pysa Action
-        uses: facebook/pysa-action
+        uses: facebook/pysa-action@v0.0.1
         with:
           repo-directory: './'
           requirements-path: 'requirements.txt'
