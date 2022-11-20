@@ -1,11 +1,12 @@
-name: Scan Repo for Security Issues
+name: 'Scan Repo for Security Issues'
 
 on:
   push:
     branches:
-      - main
+      - 'main'
   pull_request:
-      - main
+    branches:
+      - 'main'
 
 jobs:
   pysa:
