@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Pysa Action
-        uses: facebook/pysa-action@v0.0.1
+        uses: facebook/pysa-action
         with:
           repo-directory: './'
           requirements-path: 'requirements.txt'
