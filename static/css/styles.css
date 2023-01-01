@@ -267,6 +267,7 @@ input.key {
 .aCayab {
     height: 32px;
     margin-top: 8px;
+    padding-top: 10px !important;
 }
 .jXeDnc:not(.tmR25c) {
     text-align: center;
@@ -315,4 +316,8 @@ input.key {
     border-radius: 50%;
     color: #5f6368;
     overflow: hidden;
+}
+
+#password {
+  margin-top: 48px;
 }
