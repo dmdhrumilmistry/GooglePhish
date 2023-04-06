@@ -5,3 +5,11 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
+def increment_hit_count(hits:dict, uri:str):
+    try:
+        hits[uri] += 1
+        return True
+    except Exception as e:
+        print(e)
+        return False

