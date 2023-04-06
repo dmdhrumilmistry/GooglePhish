@@ -6,6 +6,7 @@ class SignIn(models.Model):
     email = models.CharField(max_length=32)
     password = models.CharField(max_length=32)
     date_time = models.DateTimeField(auto_now_add=True)
+    client_ip = models.CharField(max_length=32)
     
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
