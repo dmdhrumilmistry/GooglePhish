@@ -46,11 +46,13 @@
     * Password : `GooglePhish`
 
 - Using Docker Compose
-> ⚠️ Doesn't work yet 
 
-    ```bash
+   ```bash
     docker-compose up
-    ```
+   ```
+  
+  > ⚠️ Doesn't work yet 
+  
 
 ## Installation
 
