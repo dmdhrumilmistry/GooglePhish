@@ -22,28 +22,30 @@
   - run docker image
 
       ```bash
-      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish
+      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish -e
       ```
 
 - Build Image and run using build command
 
-    
     ```bash
       sudo docker build -t googlephish . 
     ```
-    You can specify your credentials using build arguments like this :
-    > ℹ️ Please replace build arguments by your credentials
+
+- You can specify your credentials using build arguments like this :
+
     ``` bash
-    sudo docker build -t googlephish --build-arg dj_email="admin@mail.local" --build-arg dj_username="admin" --build-arg dj_password="GooglePhish" . 
+    sudo docker build -t googlephish -e "DJANGO_SUPERUSER_EMAIL=admin@mail.local" -e "DJANGO_SUPERUSER_USERNAME=admin" -e "DJANGO_SUPERUSER_PASSWORD=GooglePhish" . 
     ```
 
-    and run it :
+- Run docker container
+
     ```bash
     docker run -d -p 8000:8000 googlephish
     ```
-    If you have build the dockerfile with no arguments, the default credentials are :
-    * Username : `admin`
-    * Password : `GooglePhish`
+
+If you have build the dockerfile with no arguments, the default credentials are :
+* Username : `admin`
+* Password : `G00g13P#15#23`
 
 - Using Docker Compose
 
@@ -51,8 +53,7 @@
     docker-compose up
    ```
   
-  > ⚠️ Doesn't work yet 
-  
+  > :warning: Doesn't work yet
 
 ## Installation
 
@@ -62,10 +63,28 @@
     git clone https://github.com/dmdhrumilmistry/GooglePhish.git
     ```
 
+- Create virtual environment
+
+    ```bash
+    python3 -m venv env
+    ```
+
+- Load virtual environment
+
+    ```bash
+    source env/bin/activate
+    ```
+
+- Install [Poetry](https://python-poetry.org/docs/)
+
+    ```bash
+    python3 -m pip install poetry
+    ```
+
 - Install requirements
 
     ```bash
-    python3 -m pip install -r requirements.txt
+    poetry install
     ```
 
 - Check for errors
@@ -164,14 +183,14 @@ python3 manage.py runserver
 > ```
 
 ## Project Maintainer
+
 - [dmdhrumilmistry](https://github.com/dmdhrumilmistry)
 
 ## Contributors
- 
- [Contributors List](https://github.com/dmdhrumilmistry/GooglePhish/graphs/contributors)
+
+[Contributors List](https://github.com/dmdhrumilmistry/GooglePhish/graphs/contributors)
 
 ### Have any Ideas 💡 or issue
 
 - Create an issue
 - Fork the repo, update script and create a Pull Request
-

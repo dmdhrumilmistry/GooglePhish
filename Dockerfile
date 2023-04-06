@@ -1,5 +1,5 @@
 # DESCRIPTION:	  Deploys GooglePhish in Container
-# AUTHOR:		  Dhrumil Mistry <contact@dmdhrumilmistry.me>
+# AUTHOR:		  Dhrumil Mistry <contact@dmdhrumilmistry.tech>
 # COMMENTS:
 #	This file describes how to deploy GooglePhish
 #	in a container with all dependencies installed.
@@ -28,32 +28,31 @@ WORKDIR ${GP_DIR}
 # copy project files
 COPY . .
 
+# install poetry
+ENV POETRY_HOME="/poetry"
+RUN curl -sSL https://install.python-poetry.org | python3 -
+
 # install requirements
-RUN python -m pip install -r requirements.txt
+RUN /poetry/bin/poetry install 
 
 # check for errors in application
-RUN python manage.py check
+RUN /poetry/bin/poetry run python manage.py check
 
 # migrate database
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+RUN /poetry/bin/poetry run python manage.py makemigrations
+RUN /poetry/bin/poetry run python manage.py migrate
 
 # collect static images
-RUN python manage.py collectstatic
-
-# get build arguments (credentials)
-ARG dj_email=admin@mail.local
-ARG dj_username=admin
-ARG dj_password=GooglePhish
+RUN ${POETRY_HOME}/bin/poetry run python manage.py collectstatic
 
 # create superuser
-ENV DJANGO_SUPERUSER_EMAIL=${dj_email}
-ENV DJANGO_SUPERUSER_USERNAME=${dj_username}
-ENV DJANGO_SUPERUSER_PASSWORD=${dj_password}
-RUN python manage.py createsuperuser --noinput
+ENV DJANGO_SUPERUSER_EMAIL=admin@mail.local
+ENV DJANGO_SUPERUSER_USERNAME=admin
+ENV DJANGO_SUPERUSER_PASSWORD=G00g13P#15#23
+RUN /poetry/bin/poetry run python manage.py createsuperuser --noinput
 
 # expose ports
 EXPOSE 8000
 
 # start application
-CMD [ "gunicorn", "GooglePhish.wsgi", "-b", "0.0.0.0:8000" ]
+CMD [ "/poetry/bin/poetry", "run", "gunicorn", "GooglePhish.wsgi", "-b", "0.0.0.0:8000" ]
