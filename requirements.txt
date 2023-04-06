@@ -1,4 +1,0 @@
-django
-whitenoise
-gunicorn
-requests
