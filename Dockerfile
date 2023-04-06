@@ -33,26 +33,26 @@ ENV POETRY_HOME="/poetry"
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
 # install requirements
-RUN ${POETRY_HOME}/bin/poetry install 
+RUN /poetry/bin/poetry install 
 
 # check for errors in application
-RUN python manage.py check
+RUN /poetry/bin/poetry run python manage.py check
 
 # migrate database
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+RUN /poetry/bin/poetry run python manage.py makemigrations
+RUN /poetry/bin/poetry run python manage.py migrate
 
 # collect static images
-RUN python manage.py collectstatic
+RUN ${POETRY_HOME}/bin/poetry run python manage.py collectstatic
 
 # create superuser
 ENV DJANGO_SUPERUSER_EMAIL=admin@mail.local
 ENV DJANGO_SUPERUSER_USERNAME=admin
 ENV DJANGO_SUPERUSER_PASSWORD=G00g13P#15#23
-RUN python manage.py createsuperuser --noinput
+RUN /poetry/bin/poetry run python manage.py createsuperuser --noinput
 
 # expose ports
 EXPOSE 8000
 
 # start application
-CMD [ "gunicorn", "GooglePhish.wsgi", "-b", "0.0.0.0:8000" ]
+CMD [ "/poetry/bin/poetry", "run", "gunicorn", "GooglePhish.wsgi", "-b", "0.0.0.0:8000" ]
