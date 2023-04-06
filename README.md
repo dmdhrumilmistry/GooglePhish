@@ -51,7 +51,7 @@
     docker-compose up
    ```
   
-  > ⚠️ Doesn't work yet 
+  > :warning: Doesn't work yet 
   
 
 ## Installation
