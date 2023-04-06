@@ -22,7 +22,7 @@
   - run docker image
 
       ```bash
-      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish
+      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish -e
       ```
 
 - Build Image and run using build command
@@ -62,10 +62,13 @@
     git clone https://github.com/dmdhrumilmistry/GooglePhish.git
     ```
 
+- Install Poetry
+
+
 - Install requirements
 
     ```bash
-    python3 -m pip install -r requirements.txt
+    poetry
     ```
 
 - Check for errors
@@ -164,14 +167,14 @@ python3 manage.py runserver
 > ```
 
 ## Project Maintainer
+
 - [dmdhrumilmistry](https://github.com/dmdhrumilmistry)
 
 ## Contributors
- 
- [Contributors List](https://github.com/dmdhrumilmistry/GooglePhish/graphs/contributors)
+
+[Contributors List](https://github.com/dmdhrumilmistry/GooglePhish/graphs/contributors)
 
 ### Have any Ideas 💡 or issue
 
 - Create an issue
 - Fork the repo, update script and create a Pull Request
-

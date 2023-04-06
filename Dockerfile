@@ -1,5 +1,5 @@
 # DESCRIPTION:	  Deploys GooglePhish in Container
-# AUTHOR:		  Dhrumil Mistry <contact@dmdhrumilmistry.me>
+# AUTHOR:		  Dhrumil Mistry <contact@dmdhrumilmistry.tech>
 # COMMENTS:
 #	This file describes how to deploy GooglePhish
 #	in a container with all dependencies installed.
@@ -28,8 +28,12 @@ WORKDIR ${GP_DIR}
 # copy project files
 COPY . .
 
+# install poetry
+ENV POETRY_HOME="/poetry"
+RUN curl -sSL https://install.python-poetry.org | python3 -
+
 # install requirements
-RUN python -m pip install -r requirements.txt
+RUN ${POETRY_HOME}/bin/poetry install 
 
 # check for errors in application
 RUN python manage.py check
@@ -41,15 +45,10 @@ RUN python manage.py migrate
 # collect static images
 RUN python manage.py collectstatic
 
-# get build arguments (credentials)
-ARG dj_email=admin@mail.local
-ARG dj_username=admin
-ARG dj_password=GooglePhish
-
 # create superuser
-ENV DJANGO_SUPERUSER_EMAIL=${dj_email}
-ENV DJANGO_SUPERUSER_USERNAME=${dj_username}
-ENV DJANGO_SUPERUSER_PASSWORD=${dj_password}
+ENV DJANGO_SUPERUSER_EMAIL=admin@mail.local
+ENV DJANGO_SUPERUSER_USERNAME=admin
+ENV DJANGO_SUPERUSER_PASSWORD=G00g13P#15#23
 RUN python manage.py createsuperuser --noinput
 
 # expose ports
