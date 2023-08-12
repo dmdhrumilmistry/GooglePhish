@@ -33,7 +33,7 @@ SECRET_KEY = environ.get('DJANGO_SECRET_KEY', get_random_secret_key())
 DEBUG = True if environ.get('DEBUG','False').lower() == 'true' else False
 
 ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS', '*').split(',')
-
+CSRF_TRUSTED_ORIGINS_VARIABLE = [origin.strip() for origin in environ.get('CSRF_TRUSTED_ORIGINS','').split(',')]
 
 # Application definition
 
@@ -141,3 +141,6 @@ STATICFILES_DIRS = [
 # Comment STATIC_ROOT when debug is True
 # Never use STATICFILES_DIRS and STATIC_ROOT both at the same time
 STATIC_ROOT = os.path.join(BASE_DIR, 'serve_static')
+
+## accept CSRF tokens from different domains
+CSRF_TRUSTED_ORIGINS = CSRF_TRUSTED_ORIGINS_VARIABLE
