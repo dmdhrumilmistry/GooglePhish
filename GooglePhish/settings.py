@@ -33,7 +33,7 @@ SECRET_KEY = environ.get('DJANGO_SECRET_KEY', get_random_secret_key())
 DEBUG = True if environ.get('DEBUG','False').lower() == 'true' else False
 
 ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS', '*').split(',')
-CSRF_TRUSTED_ORIGINS_VARIABLE = [origin.strip() for origin in environ.get('CSRF_TRUSTED_ORIGINS','').split(',')]
+CSRF_TRUSTED_ORIGINS_VARIABLE = [origin.strip() for origin in environ.get('CSRF_TRUSTED_ORIGINS','https://dmdhrumilmistry.github.io').split(',')]
 
 # Application definition
 
