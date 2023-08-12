@@ -122,20 +122,28 @@ If you have build the dockerfile with no arguments, the default credentials are 
 
     > Use `--insecure` tag if any issue is encountered while loading static files.
 
-## Generate and update new random key before using GooglePhish
+## Update `.env` file
 
-- Generate and copy new key
+- Env File template
+
+    ```bash
+    DJANGO_SECRET_KEY=secret_key
+    DEBUG=False
+    ALLOWED_HOSTS=*
+    CSRF_TRUSTED_ORIGINS=https://your-domain.ngrok-free.app,https://domain.localhost.run
+    ```
+
+- Generate and copy new secret key
 
     ```bash
     python3 generate_new_key.py
     ```
 
-- update secret key in settings.py of GooglePhish on line 23
+- Set `DEBUG` variable to `True` only during development stage, else use `False`
 
-  ```python
-    # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = 'your_new_key'
-  ```
+- Set `CSRF_TRUSTED_ORIGINS` while using ssh tunnels such as `ngrok` and `localhost.run`.
+
+- update values in `.env` file
   
 ## View Passwords using GooglePhish Dashboard Page
 
