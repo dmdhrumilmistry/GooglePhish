@@ -14,6 +14,8 @@
 #	docker run -d -p 80:8000 googlephish
 #
 
+## TODO: enhance dockerfile
+
 # choose baseimage
 FROM python
 
@@ -33,7 +35,7 @@ ENV POETRY_HOME="/poetry"
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
 # install requirements
-RUN /poetry/bin/poetry install 
+RUN /poetry/bin/poetry install
 
 # check for errors in application
 RUN /poetry/bin/poetry run python manage.py check
