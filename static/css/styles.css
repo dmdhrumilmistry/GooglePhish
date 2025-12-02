@@ -237,7 +237,7 @@ input:focus + .placeholder-text .text{
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+input:focus + .placeholder-text .text, input:not(:placeholder-shown) + .placeholder-text .text {
     background-color: white;
     color: black;
     transform: translate(0, -170%);
