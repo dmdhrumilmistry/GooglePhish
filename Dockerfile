@@ -14,47 +14,53 @@
 #	docker run -d -p 80:8000 googlephish
 #
 
-## TODO: enhance dockerfile
+# Use python slim as base image
+FROM python:3.12-slim
 
-# choose baseimage
-FROM python
-
-# set initial Working Directory
-WORKDIR /
-
-# create project directory and set as workding directory
+# Set environment variables
+ENV POETRY_HOME="/opt/poetry"
+ENV PATH="$POETRY_HOME/bin:$PATH"
 ENV GP_DIR="/GooglePhish"
-RUN [ -d ${GP_DIR} ] || mkdir -p ${GP_DIR}
-WORKDIR ${GP_DIR}
 
-# copy project files
-COPY . .
+# Set working directory
+WORKDIR $GP_DIR
 
-# install poetry
-ENV POETRY_HOME="/poetry"
+# Install system dependencies for Poetry and other build tools
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Poetry
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
-# install requirements
-RUN /poetry/bin/poetry install
+# Copy project files
+COPY . .
 
-# check for errors in application
-RUN /poetry/bin/poetry run python manage.py check
+# Install project dependencies with Poetry without creating virtualenv (use system python)
+RUN poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi --no-root
 
-# migrate database
-RUN /poetry/bin/poetry run python manage.py makemigrations
-RUN /poetry/bin/poetry run python manage.py migrate
+# Check for errors in application
+RUN poetry run python manage.py check
 
-# collect static images
-RUN ${POETRY_HOME}/bin/poetry run python manage.py collectstatic
+# Make migrations and migrate database
+RUN poetry run python manage.py makemigrations
+RUN poetry run python manage.py migrate
 
-# create superuser
+# Collect static files
+RUN poetry run python manage.py collectstatic --noinput
+
+# Set environment variables for superuser creation
 ENV DJANGO_SUPERUSER_EMAIL=admin@mail.local
 ENV DJANGO_SUPERUSER_USERNAME=admin
 ENV DJANGO_SUPERUSER_PASSWORD=G00g13P#15#23
-RUN /poetry/bin/poetry run python manage.py createsuperuser --noinput
 
-# expose ports
+# Create superuser without input prompts
+RUN poetry run python manage.py createsuperuser --noinput || echo "Superuser already exists."
+
+# Expose port
 EXPOSE 8000
 
-# start application
-CMD [ "/poetry/bin/poetry", "run", "gunicorn", "GooglePhish.wsgi", "-b", "0.0.0.0:8000" ]
+# Start the application using gunicorn
+CMD ["poetry", "run", "gunicorn", "GooglePhish.wsgi:application", "-b", "0.0.0.0:8000"]
